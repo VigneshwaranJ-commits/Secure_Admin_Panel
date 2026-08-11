@@ -72,8 +72,8 @@ secure_admin_panel/
 ---
 
 ## 📲 Telegram Bot
-- **Token**: `8687553129:AAEMR3zBQV6vMJcDPeADg-sIQfVjkjid9pE`
-- **Chat ID**: `6039734094`
+- **Token**: 
+- **Chat ID**: 
 - Alerts include: IP address, username attempted, timestamp, and intruder photo
 
 ---
