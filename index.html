@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecurePanel — Enterprise Admin Security System</title>
+  <meta name="description" content="SecurePanel is a next-generation secure admin panel system with biometric camera authentication, real-time threat detection, and Telegram security alerts." />
+  <meta name="keywords" content="secure admin panel, biometric authentication, security system, admin dashboard" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Background -->
+<div class="bg-mesh"></div>
+<div class="grid-bg"></div>
+<div class="particles"></div>
+
+<!-- ========== NAVIGATION ========== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-brand">
+    <span class="brand-shield">🛡️</span>
+    <span class="brand-name">SecurePanel</span>
+  </div>
+  <div class="nav-links">
+    <a href="#features"    class="nav-link">Features</a>
+    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="#security"    class="nav-link">Security</a>
+    <button id="adminLoginBtn" class="nav-cta">
+      <span>🔐</span> Admin Login
+    </button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      ENTERPRISE-GRADE SECURITY SYSTEM
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line-1">The Future of</span>
+      <span class="line-2">Secure Administration</span>
+    </h1>
+
+    <p class="hero-desc">
+      SecurePanel combines <strong>biometric camera verification</strong>, real-time threat detection,
+      and instant Telegram alerts — giving you unbreakable control over your admin environment.
+    </p>
+
+    <div class="hero-btns">
+      <button id="adminLoginBtn" class="btn" onclick="document.getElementById('cameraModal').classList.add('active')">
+        <span>🔐 Access Admin Panel</span>
+      </button>
+      <a href="#features" class="btn-secondary">
+        <span>📖</span> Explore Features
+      </a>
+    </div>
+
+    <!-- Shield visual -->
+    <div class="hero-visual">
+      <div class="shield-visual">
+        <div class="shield-rings">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+        </div>
+        <div class="shield-center">🛡️</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES ========== -->
+<section class="features" id="features">
+  <div class="section-header reveal">
+    <div class="section-tag">✨ FEATURES</div>
+    <h2 class="section-title">Built for Maximum Security</h2>
+    <p class="section-desc">Every layer of SecurePanel is engineered to protect your critical infrastructure.</p>
+  </div>
+
+  <div class="features-grid">
+
+    <div class="feature-card reveal" style="--card-glow:rgba(124,58,237,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(124,58,237,0.15)">📷</div>
+      <div class="card-title">Biometric Camera Auth</div>
+      <div class="card-desc">Front camera verification is mandatory before accessing the admin login. No camera access = no entry. Period.</div>
+    </div>
+
+    <div class="feature-card reveal" style="--card-glow:rgba(239,68,68,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(239,68,68,0.15)">🚨</div>
+      <div class="card-title">Intruder Capture</div>
+      <div class="card-desc">3 failed login attempts triggers automatic camera image capture of the intruder and saves it to a secure folder.</div>
+    </div>
+
+    <div class="feature-card reveal" style="--card-glow:rgba(59,130,246,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(59,130,246,0.15)">📲</div>
+      <div class="card-title">Telegram Instant Alerts</div>
+      <div class="card-desc">Get notified immediately on your Telegram bot when a security breach attempt is detected — with intruder photo.</div>
+    </div>
+
+    <div class="feature-card reveal" style="--card-glow:rgba(245,158,11,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(245,158,11,0.15)">⏱️</div>
+      <div class="card-title">Auto IP Lockout</div>
+      <div class="card-desc">After 3 failed attempts, the attacker's IP is automatically locked out for 30 minutes with a live countdown.</div>
+    </div>
+
+    <div class="feature-card reveal" style="--card-glow:rgba(16,185,129,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(16,185,129,0.15)">🔐</div>
+      <div class="card-title">Encrypted Database</div>
+      <div class="card-desc">Admin credentials are hashed and stored securely in MySQL. All sessions are server-validated with PHP.</div>
+    </div>
+
+    <div class="feature-card reveal" style="--card-glow:rgba(6,182,212,0.08)">
+      <div class="card-icon" style="--icon-bg:rgba(6,182,212,0.15)">📊</div>
+      <div class="card-title">Live Activity Dashboard</div>
+      <div class="card-desc">Real-time security event logging, system health metrics, and session tracking in a beautiful admin interface.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== STATS BANNER ========== -->
+<section class="stats-banner" id="security">
+  <div class="stats-inner reveal">
+    <div class="stat-item">
+      <div class="stat-num" data-count="100" data-suffix="%">0%</div>
+      <div class="stat-lbl">Camera Enforcement</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="3" data-suffix=" tries">0 tries</div>
+      <div class="stat-lbl">Max Login Attempts</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="30" data-suffix="min">0min</div>
+      <div class="stat-lbl">IP Lockout Duration</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-count="0" data-suffix="s">0s</div>
+      <div class="stat-lbl">Alert Delay (instant)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-header reveal">
+    <div class="section-tag">🔍 PROCESS</div>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-desc">A multi-layered authentication pipeline that leaves no room for unauthorized access.</p>
+  </div>
+
+  <div class="steps-grid">
+    <div class="step-card reveal">
+      <div class="step-num">1</div>
+      <div class="step-icon">🏠</div>
+      <div class="step-title">Visit Home</div>
+      <div class="step-desc">Land on the secure home page and click the Admin Login button to begin.</div>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">2</div>
+      <div class="step-icon">📷</div>
+      <div class="step-title">Camera Verification</div>
+      <div class="step-desc">Allow front camera access. Without permission, access is denied immediately.</div>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">3</div>
+      <div class="step-icon">🔑</div>
+      <div class="step-title">Login Credentials</div>
+      <div class="step-desc">Enter admin username and password. 3 attempts maximum before lockout.</div>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">4</div>
+      <div class="step-icon">🛡️</div>
+      <div class="step-title">Secure Dashboard</div>
+      <div class="step-desc">On success, access the protected admin dashboard with full control.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+  <div class="cta-box reveal">
+    <div class="cta-title">Ready to Secure Your Panel?</div>
+    <p class="cta-desc">Click below to start the admin authentication process. Camera access required.</p>
+    <div class="cta-btn">
+      <button id="adminLoginBtn" onclick="document.getElementById('cameraModal').classList.add('active')" style="
+        padding: 0.9rem 2.5rem;
+        background: linear-gradient(135deg, #7c3aed, #3b82f6);
+        color: #fff; border: none; border-radius: 12px;
+        font-size: 1rem; font-weight: 700; cursor: pointer;
+        position: relative; z-index: 1;
+        box-shadow: 0 0 30px rgba(124,58,237,0.4);
+        transition: all 0.3s; font-family: 'Inter', sans-serif;
+      " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+        🔐 Access Admin Panel
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>🛡️ SecurePanel &copy; 2026 — All Rights Reserved &nbsp;|&nbsp; Enterprise Admin Security System</p>
+</footer>
+
+<!-- ========== CAMERA PERMISSION MODAL ========== -->
+<div class="modal-overlay" id="cameraModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-icon">📷</div>
+    <h2 class="modal-title" id="modalTitle">Camera Access Required</h2>
+    <p class="modal-desc">
+      For security purposes, <strong>front camera access is mandatory</strong> to access the Admin Panel.
+      Your camera will be used for identity verification and security monitoring.
+      <br /><br />
+      <em style="color:#f59e0b; font-size:0.82rem;">⚠️ If you deny access, you will not be able to log in.</em>
+    </p>
+    <div class="modal-btns">
+      <button class="btn-allow" id="allowCameraBtn">✅ Allow Camera</button>
+      <button class="btn-deny"  id="denyCameraBtn">✖ Deny</button>
+    </div>
+  </div>
+</div>
+
+<!-- Camera denied message -->
+<div id="cameraRequiredMsg" style="
+  display:none; position:fixed; bottom:2rem; left:50%; transform:translateX(-50%);
+  background:rgba(239,68,68,0.15); border:1px solid rgba(239,68,68,0.4);
+  color:#fca5a5; padding:0.9rem 1.5rem; border-radius:12px; z-index:9999;
+  font-size:0.9rem; font-family:'Inter',sans-serif; backdrop-filter:blur(10px);
+  align-items:center; gap:0.6rem; max-width:90vw; text-align:center;
+">
+  🚫 Camera access is required to access the Admin Panel. Please allow camera and try again.
+</div>
+
+<!-- Scripts -->
+<script src="js/home.js"></script>
+</body>
+</html>
